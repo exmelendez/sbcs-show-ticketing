@@ -5,7 +5,7 @@ A JavaScript/Google Apps Script integrated spreadsheet with ability to search en
 I was approached by the Arts Department asking for a way to place barcodes on student show tickets for tracking and to prevent double useage.
 
 ## The Process
-In its initial state, the ticker holder's information must be manually typed in specified columns on the spreadsheet. When ready to make use during a show, a dropdown button must first be clicked at the top, titled "Ticket Tools" followed by a button titled *Ticket Redeem*.
+In its initial state, the ticket holder's information must be manually typed in specified columns on the spreadsheet. When ready to make use during a show, a dropdown button must first be clicked at the top, titled "Ticket Tools" followed by a button titled *Ticket Redeem*.
 
 ![Ticket Tools Button](https://i.imgur.com/r0oqfYI.png)
 
