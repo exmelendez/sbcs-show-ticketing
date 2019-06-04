@@ -1,0 +1,69 @@
+<html>
+<head>
+
+  <style>
+    body {
+    padding: 20px;
+    background-color: powderblue;
+    }
+    
+    #submitBtn {
+      font-size: 26px;
+      color: white;
+      background-color: green;
+      border-radius: 5px;
+    }
+    
+    #submitBtn:hover {
+      color: yellow;
+    }
+    
+    #ticket-input {
+      font-size: 30px;
+      width: 100%;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<center>
+Ticket Redeem
+<p><input id="ticket-input" placeholder="Ticket Number" name="ticket number"></p>
+<input id="submitBtn" type="button" value="Redeem" onclick="submitBtn()" />
+<p></p>
+<div id="statusMsg"></div>
+</center>
+
+<script>
+var statusDiv = document.getElementById("statusMsg");
+var ticketInputField = document.getElementById("ticket-input");
+
+ticketInputField.addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.getElementById("submitBtn").click();
+  }
+});
+
+  function submitBtn() {
+   
+   statusDiv.innerHTML = "";
+   var ticketValue = ticketInputField.value;
+   
+   if (ticketValue != "") {
+     google.script.run.withSuccessHandler(addSuccess).redeemTix(ticketValue);
+   } else {
+     statusDiv.innerHTML = "Ticket # required";
+   }
+  }
+  
+  function addSuccess(statusMsg) {
+    statusDiv.innerHTML = statusMsg;
+    ticketInputField.value = "";
+  }
+</script>
+</body>
+</html>
