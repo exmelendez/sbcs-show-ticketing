@@ -1,5 +1,5 @@
 # School Show Ticket Tracking + Redeem
-A JavaScript/Google Apps Script integrated spreadsheet with ability to search entered show tickets and track their useage.
+A JavaScript/Google Apps Script integrated spreadsheet with the ability to search entered show tickets and track their usage.
 
 ## What problem is it solving?
 I was approached by the Arts Department asking for a way to place barcodes on student show tickets for tracking and to prevent double useage.
